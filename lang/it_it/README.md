@@ -3,36 +3,33 @@
     Traduce/Translates <a href="https://github.com/fractureiser-investigation/fractureiser/tree/c15def8bf03315cefe24faa564754c6fa8648975">c15def8</a>
 </p>
 
-*Pardon our dust, documentation still in progress*
+*Documentazione in fase di aggiornamento*
 
-## What?
-`fractureiser` is a [Virus](https://en.wikipedia.org/wiki/Computer_virus) found in several Minecraft projects uploaded to CurseForge and CraftBukkit's dev website. The malware is embedded in multiple mods, some of which were added to highly popular modpacks. The Malware is only known to target Windows and Linux Systems.
+## Di che si tratta?
+`fractureiser` è un [virus](https://en.wikipedia.org/wiki/Computer_virus) trovato in molti progetti di Minecraft caricati su CurseForge ed il sito sviluppatori di CraftBukkit. Il malware è integrato in molteplici mod, alcune delle quali sono state aggiunte a modpack molto popolari. Attualmente il malware sembra prendere di mira solo i sistemi Windows e Linux. 
 
-If left unchecked, fractureiser can be **INCREDIBLY DANGEROUS** to your machine. Please read through this document for the info you need to keep yourself safe.
+Se lasciato libero di agire fractureiser può essere **INCREDIBILMENTE PERICOLOSO** per il tuo dispositivo. È altamente consigliato leggere questo documento per capire come tenersi al sicuro.
 
-We've dubbed this malware `fractureiser` because that's the name of the CurseForge account that uploaded the most notable malicious files.  
+Abbiamo nominato questo malware `fractureiser` perché è il nome dell'account CurseForge che ha caricato i suddetti file infetti inizialmente.
 
-## What YOU need to know
+## Cosa HAI BISOGNO di sapere
 
-### [Modded Players CLICK HERE](docs/users.md)
+### [Se giochi a Minecraft moddato CLICCA QUI](docs/users.md)
 
-If you're simply a mod player and not a developer, the above link is all you need. It contains surface level information of the malware's effects, steps to check if you have it and how to remove it, and a FAQ.
+Se sei un normale giocatore moddato e non uno sviluppatore, il link qui sopra è tutto quello di cui hai bisogno. Contiene le informazioni essenziali sugli effetti del malware, modalità di verifica dell'infezione e come rimuoverlo, ed una FAQ.
 
-Anyone who wishes to dig deeper may also look at
-* [Event Timeline](docs/timeline.md)
-* [Technical Breakdown](docs/tech.md)
+Chiunque voglia avere più informazioni può anche leggere i seguenti
+* [Timeline degli eventi](docs/timeline.md)
+* [Analisi tecnica](docs/tech.md)
 
-### I have never used any minecraft mods
+### Non ho mai usato alcuna mod su Minecraft
 
-You are not infected.
+Non sei infetto.
 
-## Current Investigation Status
-We have a good idea how fractureiser works, from Stages 0 to 3. There are certain
-unknowns, but the attack servers are offline and to our knowledge, *new* infections are
-not possible. Old infections may still be active.
+## Stato attuale dell'investigazione
+Abbiamo una buona comprensione di come fractureiser opera, dallo Stage 0 al 3. Ci sono alcune lacune, ma i server usati per l'attacco sono offline e, per quanto ne sappiamo, *nuove* infezioni non sono possibili. Tuttavia quelle precedenti potrebbero ancora essere attive.
 
-We are currently working on refining user-facing documentation, please check there for
-resources.
+Attualmente stiamo refinendo la documentazione rivolta agli utenti, fai riferimento a quella per altre risorse.
 
 ## Follow up Meeting
 On 2023-06-08 the fractureiser Mitigation Team held a meeting with notable members of the community to discuss preventive measures and solutions for future problems of this scale.
