@@ -1,6 +1,7 @@
 <p align="center">
     <img src="../../docs/media/logo.svg" alt="Logo"><br>
     Traduce/Translates <a href="https://github.com/fractureiser-investigation/fractureiser/tree/c15def8bf03315cefe24faa564754c6fa8648975">c15def8</a>
+    — 10/06/2023 2:37 AM GMT+2
 </p>
 
 *Documentazione in fase di aggiornamento*
@@ -31,19 +32,18 @@ Abbiamo una buona comprensione di come fractureiser opera dallo Stage 0 al 3. Ci
 
 Attualmente stiamo refinendo la documentazione rivolta agli utenti, fai riferimento a quella per altre risorse.
 
-## Follow up Meeting
-On 2023-06-08 the fractureiser Mitigation Team held a meeting with notable members of the community to discuss preventive measures and solutions for future problems of this scale.
-See [this page](https://github.com/fractureiser-investigation/fractureiser/blob/main/docs/2023-06-08-meeting.md) for the agenda and minutes of the event.
+## Meeting seguente
+L'08/06/2023 il Team di Mitigazione di fractureiser ha tenuto un meeting con membri noti della comunità per discutere in merito a misure di prevenzione e soluzioni per futuri problemi di entità simile.
+Leggi [questa pagina](docs/2023-06-08-meeting.md) per l'agenda dell'evento. 
 
-## Additional Info
+## Informazioni aggiuntive
 
-If you have files relevant to this malware, please upload them to https://wormhole.app and email the URL to fractureiser.investigation@opayq.com — this inbox is controlled by unascribed, and anything sent to it will be shared with the rest of the team. If you need to get in touch more generally, please send mail to jaskarth4@gmail.com.
+Se sei in possesso di file relativi a questo malware puoi caricarli su https://wormhole.app e scrivere una mail con l'URL a fractureiser.investigation@opayq.com — questa casella di posta è controllata da unascribed, e qualsiasi messaggio inviato sarà condiviso con il resto del team. Se vuoi contattarci per altri motivi invia una mail a jaskarth4@gmail.com.
 
-If you copy portions of this document elsewhere, *please* put a prominent link back to this [GitHub Repository](https://github.com/fractureiser-investigation/fractureiser) somewhere near the top so that people can read the latest updates and get in contact.
+Se copi parti di questo documento in altri posti, *per favore* inserisci un link che colleghi a questa [repository GitHub](https://github.com/fractureiser-investigation/fractureiser) in alto in modo che le persone possano leggere gli ultimi aggiornamento ed entrare in contatto.
 
-The **only** official public channel you may join without being personally invited that's *run by the same team that wrote this writeup* is [#cfmalware on EsperNet IRC](https://webchat.esper.net/?channels=cfmalware).
-**Joining an IRC channel will expose your IP address.**
+L'**unico** canale pubblico ufficiale in cui puoi entrare senza essere invitato personalmente e che *è gestito dallo stesso team che ha scritto questi documenti* è [#cfmalware su EsperNet IRC](https://webchat.esper.net/?channels=cfmalware). **Entrare in un canale IRC esporrà il tuo indirizzo IP.**
 
 ---
 
-\- the [fractureiser Mitigation Team](docs/credits.md)
+\- il [Team di Mitigazione di fractureiser](docs/credits.md)
