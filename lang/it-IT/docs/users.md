@@ -15,7 +15,7 @@ Siamo in contatto con tutte le parti interessate al fine di stabilire protocolli
 Se vuoi giocare è consigliato seguire i passaggi di controllo in questa pagina e leggere anche la sezione riguardo a cosa fare se non si è infetti.
 
 ### Indice
-* [Cosa è successo realmente?](#what-actually-happened)
+* [Cosa è successo realmente?](#cosa-è-successo-realmente)
 * [Sono infetto?](#am-i-infected)
 * [Sono infetto, e adesso?](#im-infected-now-what)
 * [Non sono infetto, e adesso?](#im-not-infected-now-what)
@@ -24,62 +24,38 @@ Se vuoi giocare è consigliato seguire i passaggi di controllo in questa pagina 
 
 Se hai qualsiasi domanda riguardo fractureiser leggi prima questa pagina per intero, incluse le domande frequenti in fondo, siccome molte domande che riceviamo trovano già risposta qui.
 
-## What Actually Happened?
+## Cosa è successo realmente?
 
-Several innocent looking malicious mods and plugins were initially uploaded by the malware's creator 
-to the mod hosting website CurseForge and plugin hub dev.craftbukkit.org (not the Bukkit 
-software itself). A high-profile mod pack developer downloaded one of these mods to try
-out, which infected files in their computer without their knowledge - this included a copy of a 
-working project that would then be uploaded to CurseForge as a seemingly leigimate file, with the 
-virus included. 
+Alcune mod e alcuni plugin apparentemente inermi sono stati caricati dal creatore del malware sul sito di mod CurseForge e sull'hub di plugin dev.craftbukkit.org (non il software Bukkit in sé). Uno sviluppatore di modpack di alto profilo ha scaricato una di queste mod per provarla, ma questa ha infettato i file nel suo computer - inclusa una copia di un progetto che è stato poi caricato su CurseForge come file legittimo, ma con il virus incluso.
 
-This process then repeated itself for a few other cases from users on CurseForge and 
-dev.craftbukkit.org, infecting copies of several popular plugins and mods. *There are reports of 
-malicious plugin and mod jars as early
-as mid-April.*
+Questo processo si è poi ripetuto per altri utenti di CurseForge e dev.craftbukkit.org, infettando copie di molti plugin e mod popolari. *Ci sono segnalazioni di jar di mod e plugin sospetti già a partire da metà Aprile*
 
-Alongside this, brute force access attempts on high traffic content creator accounts on CurseForge
-were attempted by the malware author. We are currently unsure whether the breach was due to the
-brute force attempt or due to trojan infection on the accounts' owners.
+Contemporaneamente l'autore del malware ha tentato l'accesso forzato agli account di importanti content creator su CurseForge. Siamo incerti se la violazione fosse dovuta a questi tentativi di accesso o all'infezione trojan subita dai proprietari degli account.
 
-This malware is composed of multiple "stages", each Stage is responsible for downloading and
-running the next one. In total, there are three known Stages (Stages 1, 2, and 3), with infected
-mod files serving as a "Stage 0" to kick the whole process off.
+Questo malware è composto da più "stage", ognuno dei quali è responsabile del download e dell'esecuzione del successivo. In totale sono stati individuati tre Stage (Stage 1, 2, 3) più uno "Stage 0" associato ai file infetti e che avvia l'infezione.
 
-Stage 3 is the "mastermind" of the malware, and we have evidence that it attempts to do all of
-the following:
+Lo Stage 3 è il vero "cervello" del malware, e abbiamo delle prove che faccia quanto segue:
+* si propaga su *tutti* i file `jar` presenti sul sistema, probabilmente infettando anche mod che non sono state scaricate da CurseForge o BukkitDev, o altri programmi Java
+* ruba i cookie e le informazioni di login da molti browser
+* sostituisce gli indirizzi crypto negli appunti con altri di proprietà del creatore del malware
+* ruba le credenziali di Discord
+* ruba le credenziali di Microsoft e Minecraft
 
-* Propagate itself to *all* `jar` files on the filesystem, possibly infecting mods that
-  were not downloaded from CurseForge or BukkitDev, or other Java programs
-* Steal cookies and login information for many web browsers
-* Replace cryptocurrency addresses in the clipboard with alternates that are presumably owned by
-the attacker
-* Steal Discord credentials
-* Steal Microsoft and Minecraft credentials
+(Vedi i [dettagli tecnici](tech.md) per più informazioni)
 
-(See [technical details](tech.md) for more info)
+Dato il suo comportamento siamo **abbastanza certi** nel dire che si tratta di un **attacco mirato all'ecosistema moddato di Minecraft**. Ed è abbastanza brutto. 
 
-Because of its behavior, we are **very confident** this is a **targeted attack against the modded 
-Minecraft ecosystem**. It's quite bad.
+**Fino ad altre indicazioni, scarica le mod per Minecraft con estrema cautela, indipendentemente dalla sorgente.** Nonostante i server di controllo del malware siano attualmente offline, **qualsiasi download da CurseForge o la repository dei plugin di Bukkit nelle ultime 2-3 settimane è da considerarsi potenzialmente sospetto**. Alcuni antivirus hanno già iniziato ad aggiungere le firme ai loro database, ma in attesa che arrivi a tutti continua ad agire con cautela.
 
-**Until further notice, exercise extreme caution with Minecraft mod downloads, regardless
-of origin.** While the control server for this malware is currently offline, **any
-download from Curseforge or the Bukkit plugin repository in the last 2-3 weeks should be
-treated as potentially malicious**. Some malware scanners have started adding signatures
-to their databases, but until this rolls out to all of them, please exercise caution.
+*A questo punto non possiamo affermare con certezza che altri servizi di hosting non siano infetti*. Usa con cautela qualsiasi sito. Anche le repository Maven potrebbero essere infette, e questo malware risale anche a mesi fa.
 
-*At this point we cannot be confident claiming any hosting service is unaffected*. Please
-exercise caution regardless of what site you use. Even Maven repositories may be infected,
-and this malware goes back months.
+Al momento nuove infezioni sono impossibili siccome i server di attacco sono stati disattivati, ma le infezioni esistenti potrebbero essere ancora attive.
 
-Currently, new infections are impossible as the attacker's server has been shut down,
-existing infections may still be active.
-
-<!--### Get to the point, how do I fix this?
+<!--### Taglia corto, come risolvo?
 
 ![Flowchart](media/flowchart.png)-->
 
-### Wait, what the f*** is a "stage"?
+### Aspetta, che ***** è uno "stage"?
 
 ![Stage Diagram](media/stages.png)
 
