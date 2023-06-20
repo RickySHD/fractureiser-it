@@ -16,11 +16,11 @@ Se vuoi giocare è consigliato seguire i passaggi di controllo in questa pagina 
 
 ### Indice
 * [Cosa è successo realmente?](#cosa-è-successo-realmente)
-* [Sono infetto?](#am-i-infected)
-* [Sono infetto, e adesso?](#im-infected-now-what)
-* [Non sono infetto, e adesso?](#im-not-infected-now-what)
-* [Domande frequenti (FAQ)](#frequently-asked-questions)
-* [FAQ tecniche](#technical-faq)
+* [Sono infetto?](#sono-infetto)
+* [Sono infetto, e adesso?](#sono-infetto-e-adesso)
+* [Non sono infetto, e adesso?](#non-sono-infetto-e-adesso)
+* [Domande frequenti (FAQ)](#domande-frequenti-faq)
+* [FAQ tecniche](#faq-tecniche)
 
 Se hai qualsiasi domanda riguardo fractureiser leggi prima questa pagina per intero, incluse le domande frequenti in fondo, siccome molte domande che riceviamo trovano già risposta qui.
 
@@ -59,199 +59,142 @@ Al momento nuove infezioni sono impossibili siccome i server di attacco sono sta
 
 ![Stage Diagram](media/stages.png)
 
-## Am I Infected?
+## Sono infetto?
 
-The malware has multiple stages, so asking whether you are infected is actually two questions
+Il malware si presenta in più stage, quindi chiedere se si è infetti si concretizza in due domande
 
-### Do any of my mod files have Stage 0?
-A variety of scanners exist that take a mod file and detect whether it is infected by Stage 0 of
-the malware.
+### Le mie mod hanno lo Stage 0?
+Esistono vari scanner che, dato un file di una mod, possono individuare se questo è infetto dallo Stage 0.
 
-* Overwolf's [scanner](https://github.com/overwolf/jar-infection-scanner/releases)
-  * This is the recommended option for checking your entire game - just point it at the CurseForge 
-installation folder or wherever else  you have your instances saved
-  * This is a standalone program and does not require the Overwolf app installed
-* douira's [website-based online scanner](https://douira.github.io/fractureiser-web-detector/)
-* cortex's [nekodetector](https://github.com/MCRcortex/nekodetector/releases) 
-  * Click on "Assets" to show the runnable file - requires Java to be installed
+* [Scanner](https://github.com/overwolf/jar-infection-scanner/releases) di Overwolf
+  * È consigliato usare questo per controllare l'intero gioco - seleziona semplicemente la cartella di installazione di CurseForge o dove sono le istanze di gioco
+  * Si tratta di un programma standalone, non richiede l'app di Overwolf
+* [Scanner online](https://douira.github.io/fractureiser-web-detector/) di douira
+* [nekodetector] di cortex
+  * Clicca su "Assets" per mostrare i file eseguibili - richiede Java 
 
-In isolation, stage 0 infection is not dangerous if the files are deleted and never ran.
+Se isolata, l'infezione dello Stage 0 non è pericolosa se i file vengono eliminati e mai eseguiti.
 
-### Are Stage 2 files present on my system?
+### Ci sono file dello Stage 2 sul mio sistema?
 
-Stage 2 files being on your system means that the stages 0 and 1 of the malware ran successfully.
-If they are present at all, you are likely *fully infected* and should continue reading the
-instructions in the document.
+Perché siano presenti i file dello Stage 2 devono essere stati eseguiti correttamente lo Stage 0 e lo Stage 1. Se sono presenti il tuo caso è un'*infezione totale* e dovresti continuare a leggere le istruzioni in questo documento. 
 
-Many virus scanners are starting to detect stage 2 files. If you get a warning that such
-files were found and removed, proceed to the "I'm Infected, Now What?" section.
+Molti antivirus stanno iniziando ad individuare i file dello Stage 2. Se ottieni un avviso che dice di aver trovato e rimosso questi file procedi alla sezione "Sono infetto, e adesso?".
 
-Otherwise, you can check manually by doing the following, based on your platform:
+Altrimenti puoi controllare manualmente seguendo queste instruzioni in base al tuo sistema:
 
-#### Windows Instructions
+#### Istruzioni per Windows
 
-* Open your Start menu with the Windows Key, and type `%localappdata%` - it should appear as such:
-![Search results for the above query](media/localappdata.png)
+* Apri il menù Start con il tasto Windows e scrivi `%localappdata%` - dovrebbe apparire così: 
+![Search results for the above query](../../../docs/media/localappdata.png)
 
-* Inside the Local appdata folder, you must ensure that your Explorer is set to view both 
-`Hidden Items`, and `Protected Operating System Files`.
-  * This can be done from View > Options
-  * If you are unsure how to do this, a video explanation 
-[can be found here](https://youtu.be/KLTlTlnXeKs).
-  * Windows 11 users can find the same options under the "View" button at the top ribbon, as 
-  well as  the  "..." button on the rightmost side of it
+* Dentro la cartella Local AppData devi assicurarti che nelle impostazioni di Esplora File siano abilitati sia gli `elementi nascosti` che i `file protetti di sistema`.
+  * Per abilitarli vai in Visualizza > Opzioni
+  * Se non sei sicuro puoi [trovare una spiegazione video qui](https://youtu.be/KLTlTlnXeKs) (in inglese).
+  * Gli utenti con Windows 11 possono trovare le stesse opzioni sul pulsante "Visualizza" nel riquadro superiore e sul pulsante "..." a destra.
 
-* Locate a folder named `Microsoft Edge`. The SPACE between "Microsoft" and "Edge" is
-  important - as `MicrosoftEdge` is a legitimate folder that is used by Edge.  The virus
-  simply named it like that to disguise itself.  
-  * The legitimate folder might also be called `Microsoft\Edge` (an `Edge` folder inside a 
-`Microsoft` folder).
-  * The legitimate folder doesn't *have* to exist - if you don't have any Edge related folders,
-  you're safe.
-  * Both legitimate folders can exist at the same time, this is okay too.
-* If `Microsoft Edge` is present, you were infected. If this is the case, permanently delete the 
-folder and everything inside it.
-  * If the folder can not be deleted, you must stop any Java programs currently running via your 
-Task Manager.
+* Trova una cartella chiamata `Microsoft Edge`. Lo SPAZIO tra "Microsoft" ed "Edge" è importante - la cartella `MicrosoftEdge` è autentica ed è usata dal browser Edge. Il virus la crea con questo nome per nascondersi meglio.
+  * La cartella autentica potrebbe anche chiamarsi `Microsoft/Edge` (una cartella `Edge` dentro la cartella `Microsoft`).
+  * La cartella autentica *potrebbe* non esistere - se non hai alcuna cartella relativa a Edge, sei al sicuro.
+  * Potrebbero anche esistere entrambe le cartelle autentiche, ed anche in questo caso va bene. 
+* Se la cartella `Microsoft Edge` è presente sei infetto. Elimina permanentemente la cartella ed i suoi contenuti. 
+  * Se la cartella non può essere cancellata, termina ogni programma Java attualmente in esecuzione attraverso Gestione Attività.
 
-#### MacOS Information
+### Informazioni per macOS
 
-The malware does not seem to affect MacOS, so you should be fine.  
-*Check back here every now and then just in case.*
+Il malware non sembra prendere di mira macOS, quindi dovresti essere al sicuro.  
+*Per sicurezza torna qui a controllare ogni tanto.*
 
-#### Linux Instructions
+#### Istruzioni per Linux
 
-Firstly, ensure whichever method you are using to list files has the ability to view hidden files.
-Most GUI file managers have the shortcut Ctrl+H to toggle hidden files. If doing this on a terminal, 
-use `ls -A` in the respective directories, or `ls -lha` for a more detailed listing.
+Per prima cosa assicurati che qualunque sia il modo con cui stai visualizzando i file ti permetta di vedere quelli nascosti. Molti file manager hanno la scorciatoia Ctrl+H per attivare/disattivare questi file. Se stai usando un terminale usa `ls -A` nelle rispettive cartelle, oppure `ls -lha` per una vista più dettagliata.
 
-If any of the following files exist, you were infected. If this is the case, delete all of them:
+Se uno o più tra questi file esiste, sei infetto. Nel caso elimina tutti i file:
 * `~/.config/systemd/user/systemd-utility.service`
 * `/etc/systemd/system/systemd-utility.service`
 * `~/.config/.data/lib.jar`
 
-Upon doing so, if applicable, check your `journalctl` for any changes you may not recognize. You
-can do this with the commands `journalctl -exb` (for system logs) and `journalctl -exb --user` 
-(for user logs). Run the following commands to refresh your systemd services:
+Dopo ciò controlla il tuo `journalctl` se disponibile e cerca modifiche sospette non eseguite da te. Per farlo, esegui i comandi `journalctl -exb` (per i log di sistema) e `journalctl -exb --user` (per i log dell'utente). Esegui poi questi comandi per riavviare i servizi di sistema:
 ```sh
-sudo systemctl daemon-reload # Enter your user password
+sudo systemctl daemon-reload # Inserisci la password dell'utente
 systemctl --user daemon-reload 
 ```
 
-#### Scripts
-
-*If you don't know how to run a PowerShell or Bash script, these are not for you.*  
-Automated PowerShell or Bash scripts are also available [on the PrismLauncher
-website](https://prismlauncher.org/news/cf-compromised-alert/#automated-script) to check
-for Stage 2 for you, if you have the technical knowhow to run them. Overwolf (Curseforge's
-parent company) has also released a C# Stage 2 detection tool:
+#### Script
+*Se non sai come eseuire un script Powershell o Bash, salta questa sezione.*  
+Script automatizzati di Powershell o Bash per il controllo dello Stage 2 sono disponibili [sul sito di PrismLauncher](https://prismlauncher.org/news/cf-compromised-alert/#automated-script), se possiedi le conoscenze per eseguirli. Anche Overwolf (la compagnia madre di CurseForge) ha pubblicato uno strumento C# per il rilevamento dello Stage 2:
 https://github.com/overwolf/detection-tool
 
-## I'm Infected, Now What?
+## Sono infetto, e adesso?
+**IMPORTANTE**: Non conosciamo quali siano le ragioni o gli obiettivi di tutto questo, quindi esercita estrema cautela fin quando non verrà trovato un modo definitivo per rimuovere qualsiasi sintomo. Tutto ciò che trovi scritto è esclusivamente *quello che sappiamo* - resta all'erta per eventuali comunicazioni dal team riguardo a scoperte critiche.
 
-**IMPORTANT**: We do not currently know the full extent of everything this can do, nor what its
-intent is, so extreme caution should be exercised until a complete way to remove any symptoms is
-found. Everything stated here is only *what we know* - please keep an eye on communication from the
-team on updates if anything critical is found.
+Se hai trovato file dello Stage 2 sul tuo computer è molto probabile che anche il codice dello Stage 3 sia stato eseguito ed abbia infettato il tuo dispositivo. L'opzione migliore è assumere che il tuo sistema sia *interamente compromesso*. Ecco cosa dovresti fare:
 
-If you find stage 2 files from fractureiser on your system, it's very likely that the stage 3 code
-has ran and infected your machine.  
-Your best option now is to assume everything on that system is *entirely compromised*. You should:
+* Fai un backup di tutto ciò che non vorresti perdere su una chiavetta USB o un disco removibile (dovresti già farlo regolarmente!)
+* Usando un dispositivo diverso, cambia le password di tutti i servizi a cui avevi fatto accesso sul vecchio dispositivo (Discord, email ecc.). Preferibilmente usando un gestore di password come [BitWarden](https://bitwarden.com).
+* Se non avevi l'autenticazione a due fattori attiva (app Authenticator o SMS) su ogni servizio che la supporta, inizia a configurarla immediatamente
+* Se puoi, contatta un professionista nella tua zona e chiedigli di fare una diagnostica completa sul tuo dispositivo alla ricerca di qualunque cosa sospetta, o se vuoi andare sul sicuro formatta e reinstalla il sistema.
+* Leggi la sezione qui sotto su cosa fare se non sei infetto dato che i passaggi si applicano anche al tuo caso.
 
-* Back up anything you do not want to lose on an a flash drive or external disk (you should be
-doing this regularly anyway!)
-* Using a separate device, change the passwords to all services you were logged into on
-  the old machine (Discord, email, etc.). Preferably using a password manager like
-  [BitWarden](https://bitwarden.com).
-* If you were not yet using Two-Factor Authentication (Authenticator app or SMS) for every service
-that supports it, please start doing so immediately
-* If you are able to, contact a professional service in your area to run a proper
-  diagnostic on your machine for anything suspicious, or as a safe default simply wipe and
-  reinstall the system.
-* Read the below section on what to do if you're not infected, as the steps there apply to you too.
+## Non sono infetto, e adesso?
 
-## I'm Not Infected, Now What?
+Se i rilevatori dello Stage 2 non hanno dato riscontro positivo, ci sono buone possibilità che non sia infetto e puoi continuare a giocare.
 
-If nothing was found by the stage 2 detector, chances are there's nothing going on and you're good
-to play.
+Mentre `fractureiser` è stato debellato, nuovi virus potrebbero apparire nel futuro prossimo fin quando non stabiliamo nuove regole. Se vuoi giocare ti raccomandiamo di:
 
-While `fractureiser` has been cleaned out, new viruses may appear in the near future until we 
-establish new protocols. If you want to play the game, we recommend:
+* Giocare esclusivamente con mod e modpack già scaricati e che hai verificato essere puliti.
+* Evitare di scaricare qualsiasi cosa caricata dopo l'8 giugno da autori nuovi o sconosciuti per gli stessi motivi del punto precedente.
+* Evitare di aggiornare le tue mod/i tuoi modpack.
+* Restare in contatto per comunicazioni riguardo a sviluppi su nuovi metodi per il rilevamento di problemi simili in futuro.
 
-* Play exclusively mods and modpacks that you have already downloaded and verified safe.
-* Avoid downloading anything uploaded after the 8th of June from new or unknown authors, for the
-same reason as the previous point.
-* Avoid updating your mod(pack)s.
-* Keep an eye on communication from the team on developments regarding new methods to detect
-issues like this in the future.
+## Domande frequenti (FAQ)
 
-## Frequently Asked Questions
+### CurseForge è stato hackerato?
+La compromissione non riguarda CurseForge in sè, solo utenti individuali. Non è problema di CurseForge, semplicemente è capitato che succedesse sulla loro piattaforma. CurseForge ha anche [pubblicato un articolo](https://support.curseforge.com/en/support/solutions/articles/9000228509-june-2023-infected-mods-detection-tool/) che descrive la situazione dal loro punto di vista e le contromisure che stanno adottando.
 
-### Is CurseForge hacked?
-CurseForge itself is not compromised, only individual users. This is not a CurseForge problem, they
-just happened to the be place this happened in. CurseForge have also [posted an article](https://support.curseforge.com/en/support/solutions/articles/9000228509-june-2023-infected-mods-detection-tool/) describing the situation from their end and
-are working on deploying countermeasures.
+### Modrinth va bene?
+Modrinth ha eseguito una scansione completa sui caricamenti degli ultimi 10 mesi senza trovare alcuna infezione. Raccomandiamo comunque di esercitare cautela indipendentemente da dove si scaricano le mod o simili. L'assenza di infezioni è dovuta a pura fortuna.  
 
-### Is Modrinth okay?
-Modrinth has ran a full scan of the last 10 months of uploads and no infected projects were found. 
-We still recommend exercising extreme caution when downloading anything mod related at the moment. 
-The fact no mods were infected there was entirely luck.
+### Modrinth è più sicuro?
+Non è un problema a livello di sito web, Modrinth è sicuro quanto CurseForge.
 
-### Is Modrinth safer?
-This isn't a website-level issue, Modrinth is just as safe as CurseForge is.
+### Come ha fatto CurseForge a non accorgesene?
+Il codice dell'infezione allo Stage 0 non è propriamente sospetto agli occhi di un sistema automatizzato, e poteva essere benissimo un meccanismo usato da altre mod. Infatti i primi tentativi di individuare l'infezione da Stage 0 davano molti falsi positivi anche su mod popolari come la Quark.
 
-### How did CurseForge let this slip through?
-The code the stage 0 infection ran wasn't necessarily suspicious to an automated system, and could
-very well have been something another mod would've used. In fact, early heuristics for determining
-stage 0 infection had significant amounts of false flags on popular mods such as Quark.
+Realisticamente parlando questo tipo di prevenzione a livello di piattaforma non è possibile per le infinite modalità con cui si può scrivere lo stesso codice per nascondere le vere intenzioni.
 
-Realistically, this type of prevention on a platform scale is non-feasible due to the infinite
-different ways you can lay out code to hide your intent.
+### Quali antivirus lo rilevano?
+Mentre parliamo ne stanno venendo aggiunti di nuovi, ma per ora è consigliato eseguire la verifica manuale invece di affidarsi agli antivirus.
 
-### Which Antiviruses catch this?
-New ones are being added as we speak, it's best to do the manual verification above instead of
-relying on AV for now.
+### Il multiplayer è sicuro?
+Sì, non puoi essere infettato giocando a un server multiplayer se non scarichi mod per giocarci da qualch'altra parte.
 
-### Is Multiplayer safe?
-Yes, you can not be infected via a multiplayer server if you don't download mods for it elsewhere.
+### Bedrock è al sicuro?
+Sì, sono Java è affetto.
 
-### Is Bedrock safe?
-Yes, this affects only Java.
+### Client alternativi come Lunar o Badlion sono sicuri?
+Leggi la risposta seguente.
 
-### Are alternative game clients such as Lunar or Badlion safe?
-See the below point.
+### La Optifine è sicura? / Sodium è sicura? / Iris è sicura? / La Create è sicura? / L'Essential è sicura? / La mod (inserisci nome mod) è sicura?
 
-### Is Optifine safe? / Is Sodium safe? / Is Iris safe? / Is Create safe? / Is Essential safe? / Is (insert mod) safe?
+**Non possiamo confermare la sicurezza di una qualsiasi mod al momento.**
 
-**We can not currently fully confirm the safety of any given mod.**
+Una delle funzioni dello Stage 3 del virus è quello di infettare quanti più .jar possibili presenti sul computer. Può infettare **tutti i `.jar`**, incluso Minecraft in sè (vanilla o moddato), mod di Minecraft, plugin Spigot e programmi Java senza che abbiano alcun collegamento con Minecraft. Se il tuo computer ha il codice dello Stage 3 non importa più se scarichi una mod "sicura" o meno - **verrà infettata**. Rileva e controlla gli ultimi Stage di fractureiser *prima di tutto*.
 
-One of the functions of stage3 of the virus is infecting as many .jars as it can find on your 
-computer. It can infect **all `.jar`s**, including Minecraft itself (vanilla/modded), Minecraft 
-mods, Spigot plugins, and unrelated Java applications. So if your computer has the stage3 portion 
-of the virus, it doesn't matter whether a mod you download is "safe" - it will *become* infected. 
-Detect and remove the later stages of fractureiser *first*.
+Al momento tutte le mod *rilevate* infette sono state rimosse da CurseForge. Hanno anche [pubblicato una lista delle mod infette conosciute](https://support.curseforge.com/en/support/solutions/articles/9000228509-june-2023-infected-mods-detection-tool/) (in fondo alla pagina) e le ha rimosse dal sito. Modrinth ha scansionato i 10 mesi precedenti di caricamenti e non ha trovato alcuna mod infetta.
 
-At the moment, all *known* infected mods have been removed from CurseForge. CurseForge [posted a 
-list of known infected mods](https://support.curseforge.com/en/support/solutions/articles/9000228509-june-2023-infected-mods-detection-tool/) (bottom
-of the page) and has removed them from the website. Modrinth has scanned back 10 months and has not found any infected mods. 
+Questo *non assicura però che alcune possano essere sfuggite ai controlli*. Per controllare se un dato jar contiene lo Stage 0 di fractureiser controlla la sezione [Sono infetto?](#sono-infetto) ed esecita massima cautela quando scarichi qualsiasi mod.
 
-This does *not guarantee no sneaky ones slipped through*. To check whether a given jar contains 
-stage0 of fractureiser, check the [Am I Infected?](#am-i-infected) section and overall exercise
-extreme caution downloading anything mod related for now.
+### Quanto è diffusa l'infezione?
 
-### How widespread was the infection?
+CurseForge ha informato che i file infetti sono stati scaricati circa 6000 volte durante l'intero periodo di infezione. Citando dall'annuncio sul Discord di CF:
+> Giusto per chiarezza, si tratta di circa il 0,015% dei download giornalieri per Minecraft su CurseForge.
 
-CurseForge is reporting infected files were downloaded roughly 6,000 times for the entire 
-infection period. Quote from CF's Discord announcement: 
-> Just to give perspective, this accounts to about 0.015% of CurseForge’s daily downloads 
-> for Minecraft.
+### Era un tentativo per rovinare il lancio della 1.20?
 
-### Did someone want to spoil the 1.20 release event?
+Sembra essere una coincidenza - in realtà il malware era attivo anche da parecchio prima che venisse scoperto la mattina del rilascio della 1.20.
 
-It appears to be a coincidence - this malware campaign was active for quite a while before being 
-widely uncovered the morning-of the 1.20 release.
-
-## Technical FAQ
+## FAQ tecniche
 
 ### Can fractureiser escape VMs (Virtual Machines)?
 
